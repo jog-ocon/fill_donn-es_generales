@@ -88,13 +88,13 @@ if uploaded_file:
 
             file_name = os.path.basename(st.session_state["zip_path"])
             #debugging
-            st.write(f"Files inside the zip **{file_name}**")
-            for file in files_list:
-                st.write(f"   -   {file}")
+            # st.write(f"Files inside the zip **{file_name}**")
+            # for file in files_list:
+            #     st.write(f"   -   {file}")
             #debugging
 
             xml_files = [f for f in files_list if f.endswith(".xml")]
-            st.write(f"\nXML files found : {xml_files}")
+            # st.write(f"\nXML files found : {xml_files}")
 
 
             # st.write(xml_files)
@@ -105,7 +105,7 @@ if uploaded_file:
             # if xml_ is None :
             #     xml_ = xml_files[0]
 
-            print(f'The xml file to get the batiment names is {xml_}')
+            # print(f'The xml file to get the batiment names is {xml_}')
 
             with zip_ref.open(xml_) as file:
                 tree = ET.parse(file)
